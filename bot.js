@@ -99,7 +99,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-	if (command === `play`) {
+	if (command === `1p`) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("انت لم تدخل روم صوتي");
@@ -113,7 +113,7 @@ client.on('message', async msg => {
         
 		if (!permissions.has('SPEAK')) {
 
-			return msg.channel.send("انا لا يمكنني التكلم في هاذه الروم");
+			return msg.channel.send("انا لا يمكنني التكلم في هذا الروم");
 		}
 
 		if (!permissions.has('EMBED_LINKS')) {
