@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "!";
+const prefix = "-";
 /////////////////////////
 ////////////////////////
 
@@ -313,10 +313,10 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '!help') {
+    if (message.content === '-help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
+        .setDescription('**برفكس البوت (-)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -331,7 +331,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '!admin') {
+    if (message.content === '-admin') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
         .addField('avatar', "افاتار الشخص المطلوب")
@@ -349,7 +349,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`!help`,"http://twitch.tv/Death Shop")
+client.user.setGame(`-help`,"http://twitch.tv/Death Shop")
 client.user.setStatus("dnd")
 });
 
