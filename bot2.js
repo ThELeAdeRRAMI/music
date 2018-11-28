@@ -99,7 +99,7 @@ client.on('message', async msg => {
 	let command = msg.content.toLowerCase().split(" ")[0];
 	command = command.slice(prefix.length)
 
-	if (command === `play`) {
+	if (command === `2p) {
 		const voiceChannel = msg.member.voiceChannel;
         
         if (!voiceChannel) return msg.channel.send("انت لم تدخل روم صوتي");
@@ -313,11 +313,11 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === '-1play') {
+    if (message.content === '-2play') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (-)**')
-        .addField('play', 'لتشغيل اغنية')
+        .addField('2', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
         .addField('skip', 'تخطي الأغنية')
